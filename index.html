@@ -28,17 +28,20 @@
 
         #buttons {
             list-style: none;
-            display: table;
-            width: 100%;
+            display: flex; /* Flexbox for responsiveness */
+            justify-content: space-evenly; /* Evenly space buttons */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
             padding: 0;
+            margin: 0;
         }
 
             #buttons li {
-                display: table-cell;
+                margin: 5px; /* Optional margin for spacing */
             }
 
-            #buttons a {
-                display: block;
+            #buttons a img {
+                max-width: 100%; /* Ensure images scale with the container */
+                height: auto; /* Keep the aspect ratio */
             }
 
         #banner {
