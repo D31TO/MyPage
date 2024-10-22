@@ -7,96 +7,168 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <style>
         body {
-            background-color: black;
-            color: white;
-            text-shadow: 2px 2px purple;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 35%; /* Keep for larger screens */
-            text-align: center;
-            word-wrap: break-word; /* Ensures text doesn't overflow */
+          background-color: black;
+          color: white;
+          text-shadow: 2px 2px purple;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 35%; /* Keep for larger screens */
+          text-align: center;
+          word-wrap: break-word; /* Ensures text doesn't overflow */
         }
 
         .background {
-            background-image: url("assets/PageBack.png");
-            background-repeat: repeat;
-            image-rendering: crisp-edges;
-            outline: #74058a ridge 5px;
-            padding-left: 5px;
-            padding-right: 5px;
-            padding-bottom: 5px;
+          background: linear-gradient(rgba(252, 0, 93, 0.75), rgba(15, 148, 231, 0.402)), url("assets/PageBack5.png");
+          background-repeat: repeat;
+          background-blend-mode: multiply;
+          background-position: top center;
+          background-attachment: fixed;
+          image-rendering: crisp-edges;
+          outline: #74058a ridge 5px;
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-bottom: 5px;
         }
 
         #buttons {
-            list-style: none;
-            display: flex; /* Flexbox for responsiveness */
-            justify-content: space-evenly; /* Evenly space buttons */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            padding: 0;
-            margin: 0;
+          list-style: none;
+          display: flex; /* Flexbox for responsiveness */
+          justify-content: left; /* Evenly space buttons */
+          align-content: space-around;
+          flex-wrap: wrap; /* Allow wrapping on smaller screens */
+          padding: 0;
+          margin: 0;
+          margin-top: 20px;
+        }
+        
+        #buttons li {
+          margin: 5px; /* Optional margin for spacing */
+          /* justify-self: left; */
         }
 
-            #buttons li {
-                margin: 5px; /* Optional margin for spacing */
-            }
+        #buttons a img {
+          max-width: 100%; /* Ensure images scale with the container */
+          height: auto; /* Keep the aspect ratio */
+        }
 
-            #buttons a img {
-                max-width: 100%; /* Ensure images scale with the container */
-                height: auto; /* Keep the aspect ratio */
-            }
+        #two-col {
+          display: flow-root; /* Flexbox for responsiveness */
+          justify-content: space-evenly; /* Evenly space buttons */
+          align-items: start;
+          flex-wrap: wrap; /* Allow wrapping on smaller screens */
+          width: 100%;
+          margin-top: 20px;
+          padding-bottom: 20px;
+        }
+
+        #left {
+          height: 250px;
+          float: left;
+          width: 35.5%;
+          overflow: hidden;
+          margin: 0%;
+          padding: 0;
+        }
+
+        #right {
+          height: 250px; float: right; width: 61.5%;
+          overflow: hidden; margin-bottom:5px;
+          margin: 0%;
+          padding: 0;
+        }
+
+        h1, h2, h3 {
+          color: #f9c8ff;
+          text-shadow: 2px 2px #74058a;
+          font-style: italic;
+        }
+
+        .framed {
+          outline: gray ridge 5px;
+          filter: drop-shadow(6px 6px 5px black);
+        }
+
+        #personwrapper {
+          display: inline-block;
+          width: calc(100% - 10px);;
+        }
+
+        #personwrapper > p {
+          display: flow-root;
+        }
+
+        #bottomgirl {
+          /* display: flow-root; */
+          float: left;
+          margin-left: 20px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        #caption {
+          padding-left: 20px;
+          padding-right: 10px;
+        }
+
+        #c {
+          color: gray;
+          text-align: right;
+        }
 
         /* Responsive adjustments for mobile screens */
         @media (max-width: 768px) {
-            body {
-                max-width: 90%; /* Use more screen space on mobile */
-                font-size: 16px; /* Adjust font size */
-            }
+          body {
+              max-width: 90%; /* Use more screen space on mobile */
+              font-size: 16px; /* Adjust font size */
+          }
 
-            #buttons a img {
-                max-width: 80px; /* Scale down button images */
-            }
+          #buttons a img {
+              max-width: 80px; /* Scale down button images */
+          }
 
-            #buttons {
-                justify-content: center; /* Center buttons on mobile */
-            }
+          #buttons {
+              justify-content: center; /* Center buttons on mobile */
+          }
 
-            #nav td {
-                padding: 10px 5px; /* Reduce padding for navigation buttons */
-            }
+          #nav td {
+              padding: 10px 5px; /* Reduce padding for navigation buttons */
+          }
         }
 
         /* Even more compact styles for very small screens */
         @media (max-width: 480px) {
-            body {
-                max-width: 95%; /* Use nearly full width */
-                font-size: 14px; /* Further reduce font size */
-            }
+          body {
+              max-width: 95%; /* Use nearly full width */
+              font-size: 14px; /* Further reduce font size */
+          }
 
-            #buttons a img {
-                max-width: 70px; /* Further reduce button image sizes */
-            }
+          #buttons a img {
+              max-width: 70px; /* Further reduce button image sizes */
+          }
 
-            #nav td {
-                padding: 8px 3px; /* Make nav buttons smaller */
-            }
+          #nav td {
+              padding: 8px 3px; /* Make nav buttons smaller */
+          }
         }
 
         #banner {
-            width: 100%;
-            max-width: 100%;
-            max-height: 100%;
+          width: 100%;
+          max-width: 100%;
+          max-height: 100%;
         }
 
         #nav {
-            width: 100%;
+          width: 100%;
         }
 
         a {
-            color: white;
+          color: pink;
+          text-shadow: #74058a;
+          font-weight: bold;
         }
 
         #nav td {
-            cursor: pointer;
+          cursor: pointer;
         }
     </style>
 </head>
@@ -109,10 +181,10 @@
             <a href="/index.html">Home</a>
           </td>
           <td>
-            <a href="/index.html">Random</a>
+            <a href="/random.html">Random</a>
           </td>
           <td>
-            <a href="/index.html">About</a>
+            <a href="/about.html">About</a>
           </td>
         </tr>
       </tbody>
@@ -122,6 +194,26 @@
       <h1>D31TO's Profile</h1>
       <p> Welcome to my profile! I am D31TO also known as D3 or Just Alex. I am a game developer and software enjoyer who has worked on different projects both game and software. I also like server work too. Windows user.</p>
     </div>
+    <div id="two-col">
+        <!-- Left column -->
+
+        <div id="left" class="background">
+            <h2>Header</h2>
+        </div>
+
+        <!-- right column -->
+        <div id="right" class="background">
+            <h2>Header</h2>
+        </div>
+
+    </div>
+
+    <div class="background" id="personwrapper">
+      <img src="assets/BottomDude.gif" class="framed" id="bottomgirl" width="300">
+      <h2>Tester Text</h2>
+      <p id="caption">Test paragraph</p>
+    </div>
+  
     <ul id="buttons" class="background">
         <li><a href="index.html" target="_blank"><img src="assets/banner.png" width="88" height="31"></a></li>
         <li><a href="https://cooltext.com/" target="_blank"><img src="assets/cooltxt.gif" width="88" height="31"></a></li>
@@ -132,8 +224,10 @@
         <li><a href="index.html" target="_blank"><img src="assets/nmasterbot.gif" width="88" height="31"></a></li>
         <li><a href="https://store.steampowered.com/" target="_blank"><img src="assets/steam.gif" width="88" height="31"></a></li>
         <li><a href="https://www.youtube.com/" target="_blank"><img src="assets/youtube-button.gif" width="88" height="31"></a></li>
-        <li><a href="index.html" target="_blank"><img src="assets/piracy.gif" width="88" height="31"></a></li>
+        <li><a href="https://www.reddit.com/r/Piracy/" target="_blank"><img src="assets/piracy.gif" width="88" height="31"></a></li>
         <li><a href="https://myanimelist.net/animelist/D31TO" target="_blank"><img src="assets/anime_eyes.gif" width="88" height="31"></a></li>
+        <li><a href="index.html" target="_blank"><img src="assets/360.jpg" width="88" height="31"></a></li>
     </ul>
+    <p id="c">2024 D31TO</p>
   </body>
 </html>
