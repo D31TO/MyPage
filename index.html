@@ -98,11 +98,12 @@
         }
 
         #bottomgirl {
-          /* display: flow-root; */
-          float: left;
-          margin-left: 20px;
-          margin-top: 20px;
-          margin-bottom: 20px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 40%; /* Set width as a percentage for responsiveness */
+            max-width: 300px; /* Optional: limit the maximum size on large screens */
         }
 
         #caption {
@@ -117,38 +118,50 @@
 
         /* Responsive adjustments for mobile screens */
         @media (max-width: 768px) {
-          body {
-              max-width: 90%; /* Use more screen space on mobile */
-              font-size: 16px; /* Adjust font size */
-          }
+            body {
+                max-width: 90%; /* Use more screen space on mobile */
+                font-size: 16px; /* Adjust font size */
+            }
 
-          #buttons a img {
-              max-width: 80px; /* Scale down button images */
-          }
+            #buttons a img {
+                max-width: 80px; /* Scale down button images */
+            }
 
-          #buttons {
-              justify-content: center; /* Center buttons on mobile */
-          }
+            #buttons {
+                justify-content: center; /* Center buttons on mobile */
+            }
 
-          #nav td {
-              padding: 10px 5px; /* Reduce padding for navigation buttons */
-          }
+            #nav td {
+                padding: 10px 5px; /* Reduce padding for navigation buttons */
+            }
+
+            #bottomgirl {
+                width: 50%; /* Increase size on smaller screens */
+            }
+        }
+
         }
 
         /* Even more compact styles for very small screens */
         @media (max-width: 480px) {
-          body {
-              max-width: 95%; /* Use nearly full width */
-              font-size: 14px; /* Further reduce font size */
-          }
+            body {
+                max-width: 95%; /* Use nearly full width */
+                font-size: 14px; /* Further reduce font size */
+            }
 
-          #buttons a img {
-              max-width: 70px; /* Further reduce button image sizes */
-          }
+            #buttons a img {
+                max-width: 70px; /* Further reduce button image sizes */
+            }
 
-          #nav td {
-              padding: 8px 3px; /* Make nav buttons smaller */
-          }
+            #nav td {
+                padding: 8px 3px; /* Make nav buttons smaller */
+            }
+
+            #bottomgirl {
+                width: 70%; /* Further increase size on very small screens */
+            }
+        }
+
         }
 
         #banner {
