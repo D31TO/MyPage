@@ -1,2 +1,2 @@
 # MyPage
-My Github Pages site.
+My profile page made with CSS and HTML.
